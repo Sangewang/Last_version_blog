@@ -1,0 +1,16 @@
+<h1>用户列表</h1>
+<table>
+    <tr>
+        <th>用户</th>
+        <th>密码</th>
+        <th>确认密码</th>
+    </tr>
+    
+    <% @users.each do |user| %>
+        <tr>
+            <th><%= user.user_name %></th>
+            <th><%= user.user_pass %></th>
+            <th><%= user.user_pass_confirm %></th>
+        </tr>
+        <% end %>
+</table>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Blog</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<div class="page_wrap clearfix">
+  <div class="top"></div>
+  <div class="header">
+    <h1>SenseTime Blog</h1>
+ 
+    <img src="../images/footer_bg.jpg" alt=""
+    width="650" height="20" /></div>
+    
+  <div class="container clearfix">
+    <div class="left_nav" id="nav">
+      <div class="left_nav_top"></div>
+      <ul>
+        <li><a>-------------友情链接-------------</a></li>
+        <li><a href="https://last-blog-sangewang-1.c9.io">[1] 返回首页</a></li>
+        <li><a href="http://weibo.com/">[2] 看看微博</a></li>
+        <li><a href="http://www.hao123.com/">[3] 网址之家</a></li>
+        <li><a href="http://www.7k7k.com/">[4] 游戏大全</a></li>
+        <li><a href="http://www.ttmeiju.com/">[5] 天天美剧</a></li>
+        <li><a href="http://www.dytt8.net/">[6] 电影天堂</a></li>
+        <li><a href="http://www.zhihu.com/">[7] 知乎者也</a></li>
+       
+      </ul>
+      <div class="left_nav_bottom"></div>
+    </div>
+    
+  <%= yield %>
+
+  </div>
+ 
+  <div class="bottom clearfix">
+    <div class="footer clearfix"> Copyright, 2015 SenseTime &nbsp;&#8226;&nbsp; Design
+      by SenseTime </div>
+  </div>
+</div>
+</body>
+</html>

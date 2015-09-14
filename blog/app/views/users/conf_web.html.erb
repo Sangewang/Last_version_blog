@@ -1,0 +1,15 @@
+<h1>配置个人信息</h1>
+<%= @user.user_name %>
+<%= @user.user_pass %>
+
+
+<%= form_for :user do |f| %>
+  <p>
+    <strong>修改密码</strong><br>
+    <%= f.text_area :user_pass %>
+  </p>
+  
+  <p>
+    <%= f.submit "确认" %>
+  </p>
+<% end %>

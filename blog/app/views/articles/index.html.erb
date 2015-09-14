@@ -1,0 +1,18 @@
+<h1>显示文件列表</h1>
+
+<h3><%= link_to '返回', user_path %>
+<%= link_to '新建文件', new_article_path %>
+<%= link_to '初始时间排序', init_time_sort_path %>
+<%= link_to '查询', inquire_path %>
+<%= link_to '日记', dairy_path %></h3>
+
+<% @articles.each do |article| %>
+<p>
+   <h3>  <%= article.title %>
+    <%= article.id %>
+   <%= link_to '显示文件', 'articles/' + article.id.to_s %>
+    <%= link_to '编辑文件', 'articles/' + article.id.to_s + '/edit' %>
+    <td><%= link_to '删除文件', 'articles/' + article.id.to_s, method: :delete, data: { confirm: 'Are you sure?' } %></td></h3>
+</p>
+<% end %>
+

@@ -1,0 +1,17 @@
+<h1>用户登陆</h1>
+<%= form_for :user do |f| %>
+  <p>
+    <strong>用户名</strong><br>
+    <%= f.text_area :user_name %>
+  </p>
+ 
+  <p>
+    <strong>密码</strong><br>
+    <%= f.text_area :user_pass %>
+  </p>
+ 
+  <p>
+    <%= f.submit %>
+    <%= link_to '返回', index_path %>
+  </p>
+<% end %>

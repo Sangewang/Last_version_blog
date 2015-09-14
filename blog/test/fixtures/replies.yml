@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  replier: MyString
+  replyto: MyString
+  body: MyText
+  article_id: 
+
+two:
+  replier: MyString
+  replyto: MyString
+  body: MyText
+  article_id: 

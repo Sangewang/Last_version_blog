@@ -1,0 +1,79 @@
+<h1>文件内容</h1>
+<p>
+    <strong>标题</strong><br>
+    <%= @article.title %>
+</p>
+
+<p>
+    <strong>内容</strong><br>
+    <%= @article.text %>
+</p>
+
+ 
+<h2>评论</h2>
+<% @article.comments.each do |comment| %>
+  <p>
+    <strong>评论人:</strong>
+    <%= comment.commenter %>
+  </p>
+ 
+  <p>
+    <strong>留言:</strong>
+    <%= comment.body %>
+  </p>
+<% end %>
+
+
+<h1>添加评论</h1>
+
+<%= form_for([@article, @article.comments.build]) do |f| %>
+  <p>
+    <strong>评论人</strong><br>
+    <%= f.text_field :commenter %>
+  </p>
+  <p>
+    <strong>留言</strong><br>
+    <%= f.text_area :body %>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
+
+<h2>回复</h2>
+<% @article.replies.each do |reply| %>
+  <p>
+    <strong>回复人:</strong>
+    <%= reply.replier %>
+  </p>
+ 
+ <p>
+    <strong>回复对象:</strong>
+    <%= reply.replyto %>
+  </p>
+ 
+  <p>
+    <strong>回复内容:</strong>
+    <%= reply.body %>
+  </p>
+<% end %>
+
+<h1>添加回复</h1>
+
+<%= form_for([@article, @article.replies.build]) do |f| %>
+  <p>
+    <strong>回复人</strong><br>
+    <%= f.text_field :replier %>
+  </p>
+  <p>
+    <strong>回复对象</strong></strong><br>
+    <%= f.text_field :replyto %>
+  </p>
+  <p>
+    <strong>回复内容</strong><br>
+    <%= f.text_area :body %>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
